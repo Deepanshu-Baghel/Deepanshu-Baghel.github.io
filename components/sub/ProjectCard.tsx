@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Github, Globe } from "lucide-react";
 
 interface Props {
-    src: string;
+    src?: string;
     title: string;
     description: string;
     tags: string[];
@@ -13,7 +13,7 @@ interface Props {
     github: string;
 }
 
-const ProjectCard = ({ src, title, description, tags, link, github }: Props) => {
+const ProjectCard = ({ title, description, tags, link, github }: Props) => {
     return (
         <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] w-full md:w-[350px]">
             {/* Placeholder for Image */}

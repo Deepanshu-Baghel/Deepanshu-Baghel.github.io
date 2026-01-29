@@ -3,7 +3,6 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { Float, Text, OrbitControls } from "@react-three/drei";
-import { motion } from "framer-motion";
 
 const SkillText = ({ text, position }: { text: string; position: [number, number, number] }) => {
     return (
@@ -52,7 +51,7 @@ const Skills = () => {
                     <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
                     <group>
                         {skills.map((skill, i) => (
-                            // @ts-ignore
+                            // @ts-expect-error
                             <SkillText key={i} text={skill.name} position={skill.pos} />
                         ))}
                     </group>

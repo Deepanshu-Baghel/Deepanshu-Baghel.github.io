@@ -3,7 +3,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ExperienceCard = ({ item, index }: { item: any, index: number }) => {
+interface ExperienceItem {
+    role: string;
+    company: string;
+    date: string;
+    description: string;
+}
+
+const ExperienceCard = ({ item, index }: { item: ExperienceItem, index: number }) => {
     return (
         <motion.div
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
